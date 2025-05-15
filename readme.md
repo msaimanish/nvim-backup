@@ -1,7 +1,6 @@
-personal config of neo vim
+## Running code update in init.lua
 
-code running is now smart
-
+```lua
 vim.keymap.set('n', '<C-M-n>', function()
   local file = vim.fn.expand('%:p')
   local ext = vim.fn.expand('%:e')
@@ -29,6 +28,5 @@ vim.keymap.set('n', '<C-M-n>', function()
 
   vim.cmd('split | terminal ' .. cmd)
 end, { desc = 'Run current file based on extension' })
+```
 
-
-###for runnimg code (<leader> + r)
